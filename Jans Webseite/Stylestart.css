@@ -1,0 +1,625 @@
+
+*{
+    
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400px;
+        font-style: normal;
+        
+    }
+}
+
+:root{
+    --background-color: #8f2b2b;
+    --darker-background-color: #ffffff;
+    --accent-color: #000000;
+    --text-color: #000000;
+    --navbar-height: 80px;
+    --schrift:"Quicksand"
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--schrift);
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+   
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #3a6186, #89253e);}
+
+nav{
+    height: var(--navbar-height);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+        nav .logo{
+            margin-left: 30px;
+            font-family: var(--schrift);
+            font-size: 70px;
+            font-variant: small-caps;
+            text-decoration: none;
+            color: white;
+        }
+       
+               nav ul{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    list-style: none;
+                    color:white;
+                }
+
+                    nav li{
+                        height: 100%;
+                        width: 150px;
+                        text-align: center;
+                        position: relative;
+                        color:white;
+                    }
+                    
+                        nav li:hover{
+                            background: var(--accent-color);
+}
+                                nav ul a{
+                                    height: 100%;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color:white;
+                                    text-decoration: none;
+                                }
+.dropdown{
+    height: min-content;
+    width: 200px;
+    background: var(--background-color);
+
+    display: none;
+    flex-direction: column;
+    
+    position: absolute;
+    left: 0;
+    top: var(--navbar-height);   
+}
+.dropdown li{
+    height: 70px;
+    width: 100%;
+}
+.dropdown li a{
+    justify-content: flex-start;
+    padding-left: 30px;
+    width: calc(100% - 30px);
+}
+nav li:hover .dropdown{
+    display: flex;
+}
+nav input[type="checkbox"]{
+    display: none;
+}
+.expandable_li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle_button{
+    width: 30px;
+    height: 23px;
+
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bar{
+    height: 4px;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 100px;
+}
+@media(max-width: 850px){
+    .toggle_button{
+        display: flex;
+    }
+    .nav .logo{
+        text-align: left;
+    }
+    nav ul{
+        height: min-content;
+        width: 100%;
+        background-color: var(--background-color);
+        display: none;
+        position: absolute;
+        top: var(--navbar-height);
+    }
+    nav li{
+        height: min-content;
+        width: 100%;
+    }
+    nav ul a{
+        padding: 30px 0;
+    }
+    .expandable_li{
+        display: block;
+    }
+    .expandable_li label{
+        padding: 30px 0;
+        cursor: pointer;
+        display: block;
+    }
+    .expandable_li:hover .dropdown{
+        display: none;
+    }
+    .expandable_li input[type="checkbox"]:checked ~ .dropdown{
+        display: block;
+    }
+    .dropdown{
+        position: static;
+        width: 100%;
+    }
+    .dropdown li{
+        padding: 0;
+        display: block;
+        position: static;
+        background: var(--darker-background-color);
+
+    }
+    .dropdown li a{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    #toggle_button:checked ~ ul{
+        display: block;
+    }
+}
+
+.wichtigstes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 500px;
+}
+        .wichtigstes-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+           
+        }     
+
+            .wichtigstes-container h1{
+                font-family: var(--schrift);
+                font-size: 100px ;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            }
+                .wichtigstes-container ul{
+                   font-size: 80px;
+                   margin-left: -200px;
+                } 
+                    
+                    .wichtigstes-container li{
+                        font-size: 80px;
+                        padding: 50px;
+                        margin-top: 50px;
+                        list-style: none;
+                        background-color: #8f2b2b;
+                        border-radius: 20px;
+                        border: 5px solid #ffffff;    }
+
+                            .wichtigstes-container:hover li {
+                                transform: scale(1.05);
+                                transition: all 0.3s ease; 
+                                background-color: #ffffff;
+                                color: black;
+                                border: 5px solid #8f2b2b;
+                            }   
+            
+                                        .wichtigstes-container img{
+                                        
+                                        
+                                            margin-top:130px;    
+                                            border-radius: 20%;  
+                                            border: 5px solid #ffffff;      
+                                        }      
+
+                                                .wichtigstes-container:hover img{
+                                                    transform: scale(1.05);
+                                                    transition: all 0.3s ease; 
+                                                    background-color: #000000;
+                                                    border: 5px solid #8f2b2b;
+                                                }   
+
+ /* Bereich Ziele */
+
+ .Ziele{
+display:flex; 
+justify-content: center;
+ align-items: stretch;
+margin-top: -40px;
+flex-wrap: wrap;
+ gap:80px; 
+margin-bottom:60px;        
+                        }
+                    
+                            .Ziele >.Ziele-container{
+                                width: 33%;
+                                max-width: 400px;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                flex-direction: column;
+                                gap:20px;                           
+                                }
+
+                                    .Ziele > .Ziele-container:hover {
+                                        transform: scale(1.05); 
+                                        font-size: 50px; 
+                                        transition: all 0.3s ease;           
+                                        }
+
+
+                                            .Ziele >  .Ziele-container img{
+                                                    width: 100%;
+                                                    max-width: 400px;
+                                                    height: auto;
+                                                    border-radius: 20px;
+                                                    box-shadow: 0 8px 32px 0 #8f2b2b;
+                                                    
+                                                }
+                              
+                                                        .Ziele-container h2{
+                                                        
+                                                            font-size: 35px;
+                                                            font-weight: bold;
+                                                            font-family: var(--schrift);
+                                                        }
+
+            
+                                                                .Ziele-container a{
+                                                                        font-size: 16px;
+                                                                        text-align: center;
+                                                                        font-weight: bolder;
+                                                                        color: rgb(255, 255, 255);
+                                                                        background-color: #8f2b2b;
+                                                                        border-bottom: 3px solid #8f2b2b;
+                                                                        border-radius: 40px;
+                                                                        padding: 10px;
+                                                                        text-decoration: none;
+                                                                        border:3px solid white´
+                                                                        
+                                                                        
+                                                                    }
+                                                        
+                                                                                                .Ziele p{
+                                                                                                    text-align: center;
+                                                                                                    font-weight: bolder;
+                                                                                                    padding:10px
+                                                                                                    
+                                                                                                }
+
+                                                                                                .Ziele p:hover {
+                                                                                                    background-color: #ffffff;
+                                                                                                    color: #000000;
+                                                                                                    border-radius: 20px;
+
+                                                                                                    border:3px solid #8f2b2b
+                                                                                                }
+
+                                                                                                .Ziele a:hover{
+                                                                                                    background-color: rgba(255, 255, 255, 0.7); /* Transparentes Rot beim Hover */
+                                                                                                    color: #000000;
+                                                                                                    border-color: #8f2b2b;
+                                                                                                    transform: scale(1.05);
+                                                                                                    transition: all 0.3s ease; 
+                                                                                                };
+                                                                                                
+                                                                                                
+
+                                                                                            .Zieletext{
+                                                                                                text-align: center;
+                                                                                            }
+
+
+                                                                                                .Zieleheader{
+                                                                                                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+                                                                                                    font-size: 60px; 
+                                                                                                    text-transform: uppercase;
+                                                                                                    margin-left: 50px;
+                                                                                                    margin-right: 50px;
+                                                                                                    font-family: var(--schrift);
+                                                                                                    text-align: center;
+                                                                                                    margin-top: 130px;
+                                                                                                    margin-bottom: 70px;
+                                                                                            
+                                                                                            }
+
+                                              
+                                                                                            @media screen and (max-width: 576px) {
+                                                                                                .Zieleheader {
+                                                                                                    font-size: 40px;
+                                                                                                    margin-top: 30px;
+                                                                                                    margin-bottom: 50px;
+                                                                                                }
+
+                                                                                                .Ziele > .Ziele-container {
+                                                                                                flex-wrap: wrap;
+                                                                                                width: 100%;
+                                                                                                }
+                                                                                                
+                                                                                                .Ziele > .Ziele-container h2 {
+                                                                                                    font-size: 28px;
+                                                                                                }
+                                                                                                
+                                                                                                .Ziele > .Ziele-container a {
+                                                                                                    font-size: 20px;
+                                                                                                }
+                                                                                                
+                                                                                                .wichtigstes-container h1 {
+                                                                                                    font-size: 60px;
+                                                                                                }
+                                                                                                
+                                                                                                .wichtigstes-container ul {
+                                                                                                    font-size: 40px;
+                                                                                                    margin-left: 0;
+                                                                                                    margin-top: -60px;
+                                                                                                }
+                                                                                                
+                                                                                                .wichtigstes-container li {
+                                                                                                    font-size: 40px;
+                                                                                                    padding: 20px;
+                                                                                                    margin-top: 20px;
+                                                                                                }
+                                                                                                
+                                                                                                .wichtigstes-container img {
+                                                                                                    margin-top: 50px;
+                                                                                                    width: 70%;
+                                                                                                }
+                                                                                                
+                                                                                                .wichtigstes {
+                                                                                                    flex-direction: column;
+                                                                                                    gap: 50px;
+                                                                                                }
+                                                                                            }
+
+                                                                             /*Lebensmotto Teil*/
+
+                                                                            .Lebensmotto {
+                                                                                text-align: center;
+                                                                                background: linear-gradient(135deg, #8f2b2b, #d9534f);
+                                                                                padding: 30px;
+                                                                                border-top: 4px solid black;
+                                                                                border-bottom: 4px solid black;
+                                                                                color: rgb(255, 255, 255);
+                                                                                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+                                                                            
+                                                                            }
+                                                                            
+                                                                            .Lebensmotto:hover {
+                                                                                background: linear-gradient(135deg, #d9534f, #8f2b2b);
+                                                                                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+                                                                                transition: all 0.3s ease; 
+                                                                            }
+                                                                            
+                                                                            .Lebensmotto h1 {
+                                                                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+                                                                                font-size: 60px; 
+                                                                                text-transform: uppercase;
+                                                                                margin-left: 50px;
+                                                                                margin-right: 50px;
+                                                                                font-family: var(--schrift);
+                                                                                text-align: center;
+                                                                                margin-top: 99px;
+   
+                                                                            }
+
+                                                                            .h2schrift{
+                                                                                text-align: center;
+                                                                                font-size: 35px;
+                                                                                font-weight: bold;
+                                                                                font-family: var(--schrift);
+                                                                                border-radius: 15px;
+                                                                                background: #8f2b2b;
+                                                                                padding: 10px;
+                                                                                margin-left: 20px;
+                                                                                margin-right: 20px;
+                                                                                margin-bottom: 100px;
+                                                                                font-style: italic;
+                                                                               
+                                                                            }
+                                                                            
+                                                                         
+                                                                            
+                                                                            @media screen and (max-width: 992px) {
+                                                                                .Lebensmotto h1 {
+                                                                                    font-size: 40px;
+                                                                                    text-align: center;
+                                                                                    margin-left: 20px;
+                                                                                    
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media screen and (max-width: 768px) {
+                                                                                .Lebensmotto h1 {
+                                                                                    font-size: 36px;
+                                                                                    padding: 15px;
+                                                                                }
+                                                                            }
+
+
+
+
+
+ /*Akamdeische Erfolge*/
+
+ .akademische-header {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 60px; 
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: var(--schrift);
+    text-align: center;
+    margin-top: 99px;
+    margin-bottom: 100px;
+}
+
+.akademischeErfolge {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamische Spaltenanzahl */
+    gap: 50px; /* Abstand zwischen den Grid-Items */
+    justify-content: center;
+    align-items: start;
+    margin-top: -50px; /* Für ein kompakteres Layout */
+    padding: 0 20px; /* Innenabstand für kleinere Bildschirme */
+}
+
+.akademisch-container {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Halbtransparentes Hintergrund */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 3px solid #8f2b2b;
+    
+
+}
+
+.akademisch-container:hover {
+    transform: translateY(-10px); /* Hebt das Element leicht an */
+    transform: scale(1.05);
+    background-color: #8f2b2b;
+    border: 3px solid black;
+    transition: all 0.3s ease; 
+
+}
+.akademisch-container p:hover {
+    transform: scale(1.05); /* Vergrößert das Bild leicht beim Hover */
+    transition: all 0.3s ease; 
+}
+.akademisch-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+
+}
+
+.akademisch-container img:hover {
+    transform: scale(1.05); /* Vergrößert das Bild leicht beim Hover */
+    transition: all 0.3s ease; 
+}
+
+.akademisch-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: var(--schrift);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+
+}
+
+
+.akademisch-container p {
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.akademisch-text {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #200000;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .akademische-header{
+        font-size: 40px;
+    }
+
+}
+
+                
+
+/*Impressum*/
+.impressum {
+    display: flex; 
+    justify-content: space-around; /* Ändert die Verteilung der Inhalte */
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    flex-wrap: wrap;
+    gap: 40px; /* Etwas kleinerer Abstand für ein kompakteres Layout */
+    background-color: #8f2b2b;
+    border-top: 3px solid black;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8); /* Stärkere Schatten für einen dramatischeren Effekt */
+    font-family: var(--schrift);
+    padding: 20px; /* Hinzufügen von Innenabständen */
+    margin-top: 50px;
+    text-align: center; /* Zentriert den Text auf kleineren Bildschirmen */
+}
+
+.impressum2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: #ffffff;
+    text-align: center;
+    max-width: 300px; /* Begrenzung der maximalen Breite für bessere Lesbarkeit */
+}
+
+.impressum2 h1 {
+    font-size: 24px; /* Etwas größere Schrift für bessere Lesbarkeit */
+    font-family: var(--schrift);
+    margin-bottom: 10px; /* Hinzufügen eines Abstands unter dem Titel */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Hinzufügen von Zeichenabständen für einen eleganteren Look */
+}
+
+.impressum2 a {
+    text-decoration: none;
+    color: #ffffff;
+ 
+}
+
+.impressum2 a:hover {
+    color: #ffd700; /* Farbwechsel beim Hover für mehr Interaktivität */
+    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .impressum {
+        flex-direction: column;
+        gap: 20px; /* Kleinerer Abstand auf mobilen Geräten */
+        padding: 20px;
+    }
+
+    .impressum2 {
+        max-width: 100%; /* Volle Breite auf kleineren Bildschirmen */
+    }
+}       
